@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --bc-header: hsl(218, 17%, 62%);
+    --bc-header-title: hsl(275, 18%, 79%);
+    --bc-span: hsl(312, 91%, 96%);
+    --bc-body: #E5E5E5;
+    --bc-main: hsl(233, 100%, 97%);
+
+    --fc-span:hsl(232, 17%, 35%);
+    --fc-main: hsl(274, 84%, 12%);
+    --fc-title: hsl(0, 0%, 100%);
+
+    --ff-main: 'Palanquin', sans-serif;
+    --ff-texting: 'Staatliches', sans-serif;
+
+}
+
+.page{
+    max-width: 38.4rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body{
+    background-color: var(--bc-body);
+    font-family: var(--ff-main);
+    color: var(--fc-main);
+}
+
+header{
+    background-color: var(--bc-header);
+    height: 27.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header img{
+    width: 21.5rem;
+    height: 16.7rem;
+}
+
+header h1{
+    background-color: var(--bc-header-title);
+    width: 100%;
+    height: 4.9rem;
+
+    font-family: var(--ff-texting);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+
+    text-transform: uppercase;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main{
+    background-color: var(--bc-main);
+}
+
+main p{
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding: 1.4rem 4.3rem 0;
+}
+
+main #wrapper{
+    padding: 6.3rem 3.2rem 6rem;
+    display: grid;
+    gap: 3.2rem;
+}
+
+.card{
+    position: relative;
+    animation: downtop 700ms;
+}
+
+.card h2{
+    position: absolute;
+    
+    top: 1.6rem;
+    right: 1.6rem;
+
+    background-color: var(--bc-span);
+    color: var(--fc-span);
+
+    border-radius: 2rem;
+
+    width: 11.2rem;
+    height: 3.5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--ff-texting);
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+
+    animation: topdown 700ms 350ms forwards;
+
+    opacity: 0;
+
+}
+
+@keyframes topdown{
+    0%{
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);   
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
